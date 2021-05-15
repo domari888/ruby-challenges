@@ -11,7 +11,7 @@ def choose_travel(plans)
   while true
     print "プラン番号を選択 > "
     select_plan_num = gets.to_i
-    break if (1..3).include?(select_plan_num)
+    break if (select_plan_num).between?(1, 3)
     puts "1 ~ 3 の番号を入力して下さい。"
   end
   chosen_plan = plans[select_plan_num - 1]
