@@ -9,4 +9,4 @@ plans = [
 disp_travel(plans)
 chosen_travel = choose_travel(plans)
 headcount = select_headcount
-calculation_charge(chosen_travel, headcount)
+calculate_charge(chosen_travel, headcount)

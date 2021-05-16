@@ -33,7 +33,7 @@ def select_headcount
 end
 
 #合計金額の計算
-def calculation_charge(chosen_travel, headcount)
+def calculate_charge(chosen_travel, headcount)
   total_price = chosen_travel[:price] * headcount
   if headcount >= 5
     puts "5名以上ですので10%割引となります"
