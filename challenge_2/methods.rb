@@ -20,7 +20,7 @@ def choose_travel(plans)
 end
 
 #人数の選択
-def number_of_reservations(chosen_travel)
+def select_headcount
   puts "何名で予約されますか？"
   while true
     print "人数を入力 > "
@@ -33,9 +33,9 @@ def number_of_reservations(chosen_travel)
 end
 
 #合計金額の計算
-def calculation(chosen_travel, total_headcount)
-  total_price = chosen_travel[:price] * total_headcount
-  if total_headcount >= 5
+def calculation_charge(chosen_travel, headcount)
+  total_price = chosen_travel[:price] * headcount
+  if headcount >= 5
     puts "5名以上ですので10%割引となります"
     total_price *= 0.9
   end
