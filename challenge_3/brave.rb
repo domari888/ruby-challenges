@@ -1,7 +1,7 @@
 class Brave < Character
   def attack(monster)
-    puts "#{name}の攻撃！"
-    hitpoints = offence - monster.defence / 2
+    puts "#{@name}の攻撃！"
+    hitpoints = @offence - monster.defence / 2
     # hitpointがマイナスとなる場合ダメージを 1 とする
     hitpoints = 1 if hitpoints < 1 
     puts "#{monster.name}に#{hitpoints}のダメージを与えた！"

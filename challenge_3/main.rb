@@ -24,7 +24,8 @@ def info(brave, monster)
   puts "#{brave.name}は死んでしまった。" if brave.hp == 0
 end
 
-while true
+
+while monster.hp > 0 or brave.hp > 0
   brave.attack(monster)
   break if monster.hp == 0
   monster.attack(brave)
