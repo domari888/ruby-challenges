@@ -5,11 +5,11 @@ class Monster < Character
 
   def attack(brave)
     puts "#{@name}の攻撃！"
-    hitpoints = @offence - brave.defence / 2
-    # hitpointがマイナスとなる場ダメージを 1 とする
-    hitpoints = 1 if hitpoints <= 0 
-    puts "#{brave.name}は#{hitpoints}のダメージを受けた！"
-    brave.hp -= hitpoints
-    brave.hp = 0 if brave.hp < 0    
+    damage = @offence - brave.defence / 2
+    # damage が 1 より小さくなる場合、与えるダメージを 1 とする
+    damage = 1 if damage < 1
+    puts "#{brave.name}は#{damage}のダメージを受けた！"
+    brave.hp -= damage
+    brave.hp = 0 if brave.hp < 0
   end
 end
