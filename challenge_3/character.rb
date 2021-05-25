@@ -1,5 +1,6 @@
 class Character
-  attr_accessor :name, :hp, :defence
+  attr_accessor :hp
+  attr_reader :name, :defence
   def initialize(name:, hp:, offence:, defence:)
     @name = name
     @hp = hp
