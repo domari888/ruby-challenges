@@ -10,8 +10,12 @@ class ToDo
 
   def index
     puts "*=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=*"
-    @tasks.each do |task|
-      puts task.info
+    if @tasks.empty?
+      puts "【！】 タスクはありません。"
+    else
+      @tasks.each do |task|
+        puts task.info
+      end
     end
     puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
   end
