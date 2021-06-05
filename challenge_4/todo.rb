@@ -10,18 +10,18 @@ class ToDo
 
   def index
     puts "*=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=*"
-    if @tasks.empty?
-      puts "【！】 タスクはありません。"
-    else
+    if @tasks.any?
       @tasks.each do |task|
         puts task.info
       end
+    else
+      puts "【！】 タスクはありません。"
     end
     puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
   end
 
-  def delete(task_id)
-    if task = @tasks.find { |task| task.id == task_id[:id] }
+  def delete(id:)
+    if task = @tasks.find { |task| task.id == id }
       puts "【削除】#{task.info}"
       @tasks.delete(task)
     else
